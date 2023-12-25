@@ -1,9 +1,46 @@
 *{
     margin: 0;
     padding: 0;
+    font-family: 'General Sans', sans-serif;
     box-sizing: border-box;
 }
 html,body{
     width: 100%;
     height: 100%;
+}
+#main{
+    width: 100%;
+}
+#hero{
+    color: white;
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+}
+#nav{
+    width: 100%;
+    padding: 35px 35px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#nav a{
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+}
+#heading{
+    margin-top: 90px;
+}
+#heading h1{
+    margin-left: 35px;
+    font-size: 10vw;
+    line-height: 1;
+    text-transform: uppercase;
+    opacity: 0.6;
+    font-weight: 900;
+}
+#secondh1{
+    margin-left: 150px;
 }
