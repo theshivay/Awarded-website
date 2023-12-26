@@ -1,7 +1,7 @@
 *{
     margin: 0;
     padding: 0;
-    font-family: 'General Sans Medium', sans-serif;
+    font-family: 'General Sans', sans-serif;
     box-sizing: border-box;
 }
 ::selection{
@@ -10,11 +10,26 @@
 html,body{
     width: 100%;
     height: 100%;
+    /* background: black; */
+}
+#minicircle{
+    position: absolute;
+    height: 10px;
+    pointer-events: none;
+    width: 10px;
+    border-radius: 50%;
+    z-index: 999999999;
+    background-color: white;
+    /* transform: translate(-50%,-50%); */
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.5s
+    
 }
 #main{
     width: 100%;
+    background-color: black;
 }
 #hero{
+    position: relative;
     color: white;
     width: 100%;
     height: 100vh;
@@ -36,6 +51,13 @@ html,body{
 #heading{
     margin-top: 80px;
 }
+.bounding{
+    width: fit-content;
+    overflow: hidden;
+}
+.bounding .boundingelem{
+    transform: translateY(100%);
+}
 #heading h1{
     margin-left: 35px;
     font-size: 10vw;
@@ -48,6 +70,9 @@ html,body{
     margin-left: 170px;
 }
 .blocktext{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
     width: fit-content;
 }
 .blocktext h5{
@@ -56,6 +81,9 @@ html,body{
     font-size: 16px;
 }
 #chhotiheading{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
     margin-top: 100px;
     padding-right: 35px;
 }
@@ -100,10 +128,11 @@ html,body{
     height: 100vh;
     color: white;
     background-color: black;
-    padding-top: 200px;
+    padding-top: 150px;
     padding-right: 10vw;
 }
 .elem{
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -111,13 +140,113 @@ html,body{
     border-top: 1px solid grey;
     padding: 3.5vw 3vw;
     padding-right: 0;
+    cursor: pointer;
+}
+.elem:hover h1{
+    opacity: 0.3;
+    transform: translateX(40px);
 }
 .elem h1{
     text-transform: uppercase;
     font-size: 7.6vw;
     font-weight: 500;
     opacity: .7;
+    transition: all ease-in-out 0.8s;
 }
 .elemlast{
     border-bottom: 1px solid grey;
+}
+.elem img{
+    opacity: 0;
+    height: 140%;
+    z-index: 999;
+    pointer-events: none;
+    position: absolute;
+    transform: translate(-50%,-50%);
+}
+
+/* About Section is starting from here*/
+
+#about{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    padding: 10vw 10vw;
+    padding-left: 40vw;
+    gap: 50px;
+    background-color: black;
+}
+#imagesection{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    filter: grayscale(100%);
+    background-size: cover;
+    background-image: url(./pro_pic.jpeg);
+}
+#textsection{
+    width: 25rem;
+    color: white;
+}
+#textsection h4{
+    text-transform: uppercase;
+    opacity: .6;
+    margin-bottom: 10px;
+}
+#textsection p{
+    line-height: 1.5;
+    margin-bottom: 30px;
+}
+#textsection a{
+    text-decoration: none;
+    padding: 12px 20px;
+    color: white;
+    font-size: 12px;
+    border: 1px solid white;
+    border-radius: 100px;
+}
+
+/* Subscribe Section is starting from here*/
+
+#subscribe{
+    background-color: black;
+    color: white;
+    padding: 20px 30px;
+    padding-bottom: 9vw;
+}
+#subscribe h5{
+    text-transform: uppercase;
+    opacity: .6;
+}
+#subscribe h3{
+    text-transform: uppercase;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+/* Footer Section is starting from here*/
+
+#footer{
+    background-color: black;
+    color: white;
+    padding: 40px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#footerleft{
+    display: flex;
+    gap: 20px;
+}
+#footerright{
+    display: flex;
+    gap: 30px;
+}
+#footerright a{
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    color: white;
 }
