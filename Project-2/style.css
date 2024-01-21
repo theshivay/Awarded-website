@@ -1,3 +1,20 @@
+@font-face {
+    font-family:"averta cy w10" ;
+    src: url(./AvertaCY-Bold.woff2);
+}
+@font-face {
+    font-family:"averta cy w10" ;
+    src: url(./AvertaCY-Light.woff2);
+}
+@font-face {
+    font-family:"averta cy w10" ;
+    src: url(./AvertaCY-Regular.woff2);
+}
+@font-face {
+    font-family:"averta cy w10" ;
+    src: url(./AvertaCY-Semibold.woff2);
+}
+
 * {
     margin: 0;
     padding: 0;
